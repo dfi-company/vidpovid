@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дякуємо за відповідь — DFI</title>
+<style>
+  :root{
+    --purple-deep: #2A1758;
+    --purple-mid: #5B36B0;
+    --cyan: #3FC6EA;
+    --cyan-deep: #1FA8CE;
+    --ink: #1C1730;
+    --gray: #6B7280;
+    --line: #E9E6F2;
+    --bg: #FBFAFD;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{
+    height:100%;
+    background: var(--bg);
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    color: var(--ink);
+  }
+
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 24px;
+  }
+
+  .card{
+    position:relative;
+    width:100%;
+    max-width:460px;
+    background:#fff;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    box-shadow: 0 20px 50px -20px rgba(42,23,88,0.18);
+    overflow:hidden;
+  }
+
+  .banner{
+    position:relative;
+    background: linear-gradient(120deg, var(--purple-deep) 0%, var(--purple-mid) 100%);
+    padding: 30px 32px 34px;
+    color:#fff;
+    overflow:hidden;
+  }
+
+  .banner::after{
+    content:'';
+    position:absolute;
+    top:-40px; right:-40px;
+    width:160px; height:160px;
+    border-radius:50%;
+    background: radial-gradient(circle, rgba(63,198,234,0.35) 0%, rgba(63,198,234,0) 70%);
+  }
+
+  .brand{
+    font-weight:800;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: var(--cyan);
+    margin-bottom: 16px;
+    position:relative;
+    z-index:1;
+  }
+
+  .check-ring{
+    width:56px; height:56px;
+    border-radius:50%;
+    background: rgba(255,255,255,0.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom: 18px;
+    position:relative;
+    z-index:1;
+  }
+  .check-ring svg{
+    width:26px; height:26px;
+    stroke: var(--cyan);
+    stroke-width:2.6;
+    fill:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: draw 0.6s ease 0.3s forwards;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+  .banner h1{
+    position:relative;
+    z-index:1;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .body{
+    padding: 28px 32px 32px;
+  }
+
+  .body p{
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--gray);
+    margin-bottom: 22px;
+  }
+
+  .points{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap: 12px;
+  }
+
+  .points li{
+    display:flex;
+    align-items:center;
+    gap: 12px;
+    font-size: 14.5px;
+    color: var(--ink);
+    font-weight:500;
+  }
+
+  .points .dot{
+    flex:none;
+    width: 26px; height: 26px;
+    border-radius:50%;
+    background: rgba(63,198,234,0.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .points .dot svg{
+    width:13px; height:13px;
+    stroke: var(--cyan-deep);
+    stroke-width:3;
+    fill:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+
+  .foot{
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .foot span{
+    font-size: 12.5px;
+    color: var(--gray);
+  }
+
+  .foot .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    font-weight:700;
+    color: var(--cyan-deep);
+  }
+  .foot .badge::before{
+    content:'';
+    width:6px; height:6px;
+    border-radius:50%;
+    background: var(--cyan);
+  }
+
+  @media (max-width: 480px){
+    .banner{ padding: 26px 24px 30px; }
+    .body{ padding: 24px 24px 26px; }
+    .banner h1{ font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="banner">
+      <div class="brand">DFI</div>
+      <div class="check-ring">
+        <svg viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6"/></svg>
+      </div>
+      <h1>Дякуємо! Ваш голос — «Так»</h1>
+    </div>
+
+    <div class="body">
+
+      <ul class="points">
+        <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6"/></svg></span> Відповідь збережено</li>
+        <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6"/></svg></span> Врахуємо у роботі</li>
+        <li><span class="dot"><svg viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6"/></svg></span> Дякуємо, що ви з нами</li>
+      </ul>
+
+      <div class="foot">
+        <span>DFI</span>
+        <span class="badge">Готово</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
